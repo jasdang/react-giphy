@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
@@ -10,12 +10,12 @@ import '../assets/stylesheets/application.scss';
 class Hello extends Component {
   constructor(props) {
     super(props);
-    this.state = { clicked: true };
+    this.state = {clicked: true};
   }
 
   handleClick = () => {
     // Change clicked state
-    this.setState({ clicked: !this.state.clicked });
+    this.setState({clicked: !this.state.clicked});
   };
 
   render() {
@@ -24,8 +24,7 @@ class Hello extends Component {
     return (
       <div
         className={this.state.clicked ? 'clicked' : null}
-        onClick={this.handleClick}
-      >
+        onClick={this.handleClick}>
         Hello, {this.props.name}{' '}
       </div>
     );
@@ -34,5 +33,5 @@ class Hello extends Component {
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="Jasmine" />, root);
+  ReactDOM.render(<Hello name='Jasmine' />, root);
 }
